@@ -1,6 +1,6 @@
 <h1>📝 Tasks App</h1>
 
-  <p>This is a simple <strong>Tasks App</strong> built as a learning project. It allows users to add, view, and manage their tasks. The app is designed to be clean, beginner-friendly, and open for improvements or personal use.</p>
+  <p>This is a <strong>Task Manager App</strong> built as a learning project. It allows users to add, view, and manage their tasks. The app is designed to be clean, beginner-friendly, and open for improvements or personal use.</p>
 
   <h2>🚀 Features</h2>
   <ul>
