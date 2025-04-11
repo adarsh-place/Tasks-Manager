@@ -8,16 +8,6 @@
     <li>Mark tasks as complete</li>
     <li>Delete tasks</li>
     <li>Responsive and clean UI</li>
-    <li>Lightweight and beginner-friendly code</li>
-  </ul>
-
-  <h2>🧠 Purpose</h2>
-  <p>This app was created for <strong>learning purposes</strong> to practice:</p>
-  <ul>
-    <li>HTML/CSS/JavaScript (or React, depending on your stack)</li>
-    <li>Project structure</li>
-    <li>Git and GitHub workflows</li>
-    <li>Building something start to finish</li>
   </ul>
 
   <h2>🛠️ Technologies Used</h2>
@@ -34,27 +24,32 @@
   <h2>📦 Installation</h2>
   <ol>
     <li>Clone the repository:
-      <pre><code>git clone https://github.com/adarsh-place/Task-Manager.git
+      <pre><code>git clone https://github.com/adarsh-place/Tasks-Manager.git
       </code></pre>
     </li>
     <li>Change directory: 
-      <pre><code>cd Task-Manager
-      </code></pre>
+      <pre>cd Task-Manager
+      </pre>
     </li>
-    <li>Open <code>index.html</code> in your browser (for basic JS version)</li>
-    <li><strong>OR</strong>, if it's a React app:
+    <li>Run the command to install the packages:
       <pre><code>npm install
-npm start</code></pre>
+      </code></pre>
     </li>
   </ol>
 
-  <h2>📂 Project Structure</h2>
-  <pre><code>tasks-app/
-├── index.html
-├── style.css
-├── script.js
-└── README.md
-</code></pre>
+  <h2>🌐 Environment Setup</h2>
+  <p>Before running the app, make sure to set up your MongoDB database:</p>
+  <ol>
+    <li>Create a MongoDB database using <a href="https://www.mongodb.com/cloud/atlas" target="_blank">MongoDB Atlas</a> or your local MongoDB server.</li>
+    <li>Get the connection string (MongoDB URL).</li>
+    <li>Paste the connection string in the <code>.env</code> file inside the root directory of the project</li>
+  </ol>
+  
+  <pre><code>MONGODB_URL=your-mongodb-connection-url</code></pre>
 
+  <h2>Running the website</h2>
+  <p>Go to any web-browser and paste the link: </p>  
+  <pre><code>http://localhost:8000/</code></pre>
+  
   <h2>🙌 Contributing</h2>
   <p>Pull requests are welcome. If you want to add features or improve the design, go for it!</p>
