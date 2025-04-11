@@ -1,0 +1,78 @@
+<%- include("partials/header") %>
+  <body>
+    <%- include("./partials/nav.ejs") %>
+    <div class="tasks-content">
+      <h2>Ongoing Tasks</h2>
+
+      <% if (task1.length > 0) { %>
+        <% task1 .forEach(task => { %>
+          <% if (task.done === false) { %>
+            <div class="tasks-overview" style="border-left: solid red 5px;">
+              <div>
+                <h3 class="title"><%= task.title %></h3>
+                <p class="snippet"><%= task.snippet %></p>
+                <!-- <p>Deadline : <%= moment(task.deadlineDateTime).format("MMM DD, YYYY, hh:mm a") %></p> -->
+              </div>
+              <div class="time-left" style="text-align: center;">Time left : <%= moment.duration(moment(task.deadlineDateTime).diff(moment(currDate))).humanize() %></div>
+              <div style="text-align: right;">
+                <a href="/mark-done?id=<%= task.id %>&isDone=<%= true %>">Mark as done</a>
+              </div>
+            </div>
+          <% } else { %>
+            <div class="tasks-overview" style="border-left: solid green 5px;">
+              <div>
+                <h3 class="title"><%= task.title %></h3>
+                <p class="snippet"><%= task.snippet %></p>
+              </div>
+              <div class="time-left" style="text-align: center;">Time left : <%= moment.duration(moment(task.deadlineDateTime).diff(moment(currDate))).humanize() %></div>
+              <div class="done2" style="align-self: right;">  
+                <img src="/tick1.png" alt="Done">
+                <a href="/mark-done?id=<%= task.id %>&isDone=<%= false %>">Mark incomplete</a>
+              </div>
+              <!-- <div class="done-text">Done</div> -->
+            </div>
+          <% } %>
+        <% }) %>
+      <% } else { %>
+        <p style="text-align: center; margin-top: -15px;">There are no tasks to display...</p>
+      <% } %>
+
+      <h2 style="margin-top: 60px;">Tasks with Passed Deadlines</h2>
+
+      <% if (task2.length > 0) { %>
+        <% task2.forEach(task => { %>
+          <% if (task.done === false) { %>
+            <div class="tasks-overview" style="border-left: solid red 5px;">
+              <div>
+                <h3 class="title"><%= task.title %></h3>
+                <p class="snippet"><%= task.snippet %></p>
+              </div>
+              <div class="time-left" style="text-align: center;">Deadline : <%= moment(task.deadlineDateTime).format("MMM DD, YYYY, hh:mm a") %></div>
+              <div style="text-align: right;">
+                <a href="/mark-done?id=<%= task.id %>&isDone=<%= true %>">Mark as done</a>
+              </div>
+            </div>
+          <% } else { %>
+            <div class="tasks-overview" style="border-left: solid green 5px;">
+              <div>
+                <h3 class="title"><%= task.title %></h3>
+                <p class="snippet"><%= task.snippet %></p>
+              </div>
+              <div class="time-left" style="text-align: center;">Deadline : <%= moment(task.deadlineDateTime).format("MMM DD, YYYY, hh:mm a") %></div>
+              <div class="done2" style="align-self: right;">  
+                <img src="/tick1.png" alt="Done">
+                <a href="/mark-done?id=<%= task.id %>&isDone=<%= false %>">Mark incomplete</a>
+              </div>
+              <!-- <div class="done-text">Done</div> -->
+            </div>
+          <% } %>
+        <% }) %>
+      <% } else { %>
+        <p style="text-align: center; margin-top: -15px;">There are no tasks to display...</p>
+      <% } %>
+      
+    </div>
+  
+    <%- include("partials/footer") %>
+  </body>
+</html>

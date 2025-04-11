@@ -1,0 +1,74 @@
+<%- include("partials/header") %>
+  <body>
+    <%- include("./partials/nav.ejs") %>
+    <div class="table-container">
+      <h2 class="task-title">Add Task</h2>
+
+      <div>
+
+        <form action="/add-task" method="post">
+          <div class="new-task">
+            <div class="form-group">
+              <label for="title" class="text-light">Title</label>
+              <input
+                type="text"
+                name="title"
+                value=""
+                placeholder="Input task here"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="snippet" class="text-light">Snippet</label>
+              <input
+                type="text"
+                name="snippet"
+                value=""
+                placeholder="Input short description here"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="desc" class="text-light">Description</label>
+              <textarea
+                type="text"
+                name="desc"
+                value=""
+                placeholder="Input description here"
+              ></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="deadline_date" class="text-light">Deadline Date </label>
+              <input
+                type="date"
+                name="deadline_date"
+                value="<%= formattedDate%>"
+                style="padding: 2px 5px 2px 5px;"
+              />
+              <br>
+              <br>
+            </div>
+            <div class="form-group">
+              <label for="deadline_time" class="text-light">Deadline Time </label>
+              <input
+                type="time"
+                name="deadline_time"
+                value="<%= formattedTime %>"
+                style="padding: 2px 5px 2px 5px;"
+              />
+              <br>
+              <br>
+            </div>
+
+            <div class="form-group">
+              <button type="submit" class="btn">Save</button>
+              <a class="btn" href="/">Back</a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <%- include("partials/footer") %>
+  </body>
+</html>
