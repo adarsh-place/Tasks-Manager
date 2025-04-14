@@ -41,11 +41,11 @@
   <p>Before running the app, make sure to set up your MongoDB database:</p>
   <ol>
     <li>Create a MongoDB database using <a href="https://www.mongodb.com/cloud/atlas" target="_blank">MongoDB Atlas</a> or your local MongoDB server.</li>
-    <li>Get the connection string (MongoDB URL).</li>
+    <li>Get the connection string (MongoDB URI).</li>
     <li>Paste the connection string in the <code>.env</code> file inside the root directory of the project</li>
   </ol>
   
-  <pre><code>MONGODB_URL=your-mongodb-connection-url</code></pre>
+  <pre><code>MONGODB_URI=your-mongodb-connection-url</code></pre>
 
   <h2>Running the website</h2>
   <p>Go to any web-browser and paste the link: </p>  
